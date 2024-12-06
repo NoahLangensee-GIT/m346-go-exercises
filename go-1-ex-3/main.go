@@ -13,8 +13,8 @@ func main() {
 
 	fmt.Fprintln(os.Stdout, "the dice shows", eyes, "eyes")
 
-	fmt.Fprintln(os.Stdout, "the dice was rolled at", when)
+	fmt.Fprintln(os.Stderr, "the dice was rolled at", when)
 
 	//go run go-1-ex-3/main.go > eyes.txt
-	//go run go-1-ex-3/main.go > dice.log
+	//go run go-1-ex-3/main.go 2> dice.log
 }
