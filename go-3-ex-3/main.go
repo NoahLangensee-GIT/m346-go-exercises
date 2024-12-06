@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 const (
 	Lower = 1
@@ -9,10 +11,15 @@ const (
 
 func main() {
 	for i := Lower; i <= Upper; i++ {
-		var out string
-		if i%3 == 0 && i%5 == 0 {
-			out = "FizzBuzz"
+		switch {
+		case i%3 == 0:
+			fmt.Print("Fizz")
+			fallthrough
+		case i%5 == 0:
+			fmt.Print("Buzz")
+		default:
+			fmt.Print(i)
 		}
-		fmt.Print(i, ". ")
+		fmt.Println()
 	}
 }
